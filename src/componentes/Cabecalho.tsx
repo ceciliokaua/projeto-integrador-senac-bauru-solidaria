@@ -3,7 +3,7 @@ import { Link } from "react-router";
 function Cabecalho() {
     return(
         <div>
-            <h1>Componente Cabeçalho</h1>  
+            <h1>Componente Teste</h1>  
             <header>
                 <nav>
                     <ul>
