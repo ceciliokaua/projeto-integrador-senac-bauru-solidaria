@@ -143,3 +143,117 @@ button, .btn-primary {
     font-size: 1.1rem;
   }
 }
+
+/* SEÇÃO RODAPÉ */
+
+/* Cores base */
+
+/* Rodape geral */
+:rodape root {
+  --primary: #0EA5E9;
+  --secondary: #38BDF8;
+  --accent: #22C55E;
+  --background: #FFFFFF;
+  --text: #0F172A;
+}
+.Rodape {
+  background-color: var(--background);
+  border-top: 1px solid #e5e7eb;
+  margin-top: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container */
+.rodape-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+/* Colunas */
+.rodape-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Logo */
+.rodape-logo {
+  color: var(--primary);
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Títulos */
+.rodape-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+/* Texto */
+.rodape-text {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Lista */
+.Rodape ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Rodape ul li {
+  margin-bottom: 8px;
+}
+
+/* Links */
+.Rodape a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.Rodape a:hover {
+  color: var(--primary);
+}
+
+/* Redes sociais */
+.socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.socials a {
+  width: 35px;
+  height: 35px;
+  background-color: var(--secondary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.socials a:hover {
+  background-color: var(--primary);
+}
+
+/* Parte inferior */
+.footer-bottom {
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+  color: var(--text);
+}
