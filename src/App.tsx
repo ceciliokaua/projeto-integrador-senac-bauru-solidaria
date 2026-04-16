@@ -6,6 +6,7 @@ import Projetos from './paginas/Projetos'
 import PageNotFound from './paginas/PageNotFound'
 import Cabecalho from './componentes/Cabecalho'
 import Rodape from './componentes/Rodape'
+import Cards from './componentes/Cards'
 
 
 function App() {
@@ -17,9 +18,9 @@ function App() {
         <Route path="*" element={<PageNotFound />} />
         <Route path="/" element={<Home />} /> 
         <Route path="/cadastro" element={<Cadastro />} /> 
-        <Route path="/projetos" element={<Projetos />} /> 
-        
+        <Route path="/projetos" element={<Projetos />} />         
       </Routes>
+      <Cards />
       <Rodape />
     </>
   )
