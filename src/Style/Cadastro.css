@@ -1,0 +1,94 @@
+.cadastro-overlay {
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.cadastro-card {
+    background: #ffffff;
+    width: 420px;
+    max-width: 90vh;
+    overflow-y: auto;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.cadastro-header{
+    margin-bottom: 16px;
+}
+
+.cadastro-header h2{
+    color: #6b5cff;
+    font-size: 20px;
+}
+
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.cadastro-form label{
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.cadastro-form input, .cadastro-form select, .cadastro-form textarea{
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+    font-size: 14px;
+}
+
+.cadastro-form select{
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.cadastro-form textarea{
+    resize: none;
+    height: 90px;
+}
+
+.cadastro-btn {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #cbbcff;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cadastro-btn:hover {
+    background: #b7a6ff;
+}
+
+.cadastro-form input::placeholder, .cadastro-form textarea::placeholder {
+    color: #aaa;
+}
+
+.cadastro-form input:focus, .cadastro-form select:focus, .cadastro-form textarea:focus {
+    outline: none;
+    border-color: #6b5cff;
+}
+
+.cadastro-sucesso {
+    background-color: #e6f4ea;
+    color: #1e7e34;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}
