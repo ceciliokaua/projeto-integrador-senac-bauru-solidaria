@@ -1,5 +1,9 @@
-import { useState } from "react";
-import "../Style/Cadastro.css";
+import { useEffect, useState } from "react";
+import "../Style/style.css";
+
+interface CadastroModalProps {
+    onClose: () => void;
+}
 
 interface CadastroForm {
     nome: string;
@@ -10,7 +14,13 @@ interface CadastroForm {
     mensagem: string;
 }
 
-function Cadastro() {
+function CadastroModal({ onClose }: CadastroModalProps) {
+
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        setIsVisible(true);
+    }, []);
 
     const initialFormState: CadastroForm = {
         nome: "",
@@ -24,6 +34,14 @@ function Cadastro() {
     const [form, setForm] = useState<CadastroForm>(initialFormState);
 
     const [sucesso, setSucesso] = useState(false);
+
+    useEffect(() => {
+        document.body.style.overflow = "hidden";
+
+        return () => {
+            document.body.style.overflow = "auto";
+        };
+    }, []);
     
     function handleChange(
     e: React.ChangeEvent<
@@ -44,9 +62,24 @@ function handleSubmit(e: React.FormEvent) {
     setForm(initialFormState);
 }
 
+function handleClose() {
+    setIsVisible(false);
+
+    setTimeout(() => {
+        onClose();
+    }, 300); // tempo da animação
+}
+
     return (
-        <div className="cadastro-overlay">
-            <div className="cadastro-card">
+        <div className={`cadastro-overlay ${isVisible ? "show" : ""}`} 
+             onClick={handleClose} >
+            <div className={`cadastro-card ${isVisible ? "show" : ""}`} 
+                 onClick={(e) => e.stopPropagation()}>
+
+                <button className="fechar-modal" onClick={handleClose}>
+                    x
+                </button>
+
                 <header className="cadastro-header">
                     <h2>Cadastro de Voluntário</h2>
                 </header>
@@ -132,4 +165,4 @@ function handleSubmit(e: React.FormEvent) {
         </div>
     )
 }
-export default Cadastro
+export default CadastroModal
