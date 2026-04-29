@@ -55,11 +55,18 @@ function CadastroModal({ onClose }: CadastroModalProps) {
         [name]: value, });
 }
 
-function handleSubmit(e: React.FormEvent) {
+async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    console.log(form);
-    setSucesso(true);
-    setForm(initialFormState);
+
+    try {
+        await enviarCadastro(form);
+
+        setSucesso(true);
+        setForm(initialFormState);
+    }   catch (error) {
+        console.error(error);
+        alert("Erro ao enviar cadastro");
+    }
 }
 
 function handleClose() {
@@ -68,6 +75,16 @@ function handleClose() {
     setTimeout(() => {
         onClose();
     }, 300); // tempo da animação
+}
+
+async function enviarCadastro(dados:CadastroForm) {
+    // Simulação de API (replace futuramente)
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Enviando para o back-end", dados);
+            resolve(true);
+        }, 1000);
+    });
 }
 
     return (

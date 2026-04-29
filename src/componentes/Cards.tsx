@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import "../Style/style.css";
 
 interface Projeto {
@@ -33,6 +34,8 @@ const PROJETOS_DATA: Projeto[] = [
 ];
 
 function Projetos() {
+    const navigate = useNavigate();
+
     return (
         <main className="projetos-container">
             <h1>Projetos em Destaque</h1>
@@ -50,7 +53,10 @@ function Projetos() {
                             <span>{projeto.categoria}</span>
                             <h3>{projeto.titulo}</h3>
                             <p>{projeto.descricao}</p>
-                            <button className="btn-participar">
+                            <button 
+                                className="btn-participar"
+                                onClick={() => navigate("/cadastro")}
+                            >
                                 Quero Participar
                             </button>
                         </div>
