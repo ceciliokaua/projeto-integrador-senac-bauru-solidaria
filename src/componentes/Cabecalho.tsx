@@ -5,7 +5,7 @@ function Cabecalho() {
     return (
         <header className="header-container">
             <div className="logo">
-                Bauru Solidária
+                <img src="Logo.png" alt="Bauru Solidária"/>
             </div>
             <nav>
                 <ul className="nav-list">

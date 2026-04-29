@@ -3,13 +3,13 @@
 
 :root {
   /* Paleta de Cores */
-  --primary-color: #FF6B6B; 
-  --secondary-color: #4ECDC4; 
-  --accent-color: #FFE66D;      
+  --primary-color: #0EA5E9; 
+  --secondary-color: #38BDF8; 
+  --accent-color: #22C55E;      
   
   /* Cores de Texto e Fundo */
-  --bg-color: #F7FFF7;           
-  --text-main: #2F3E46;          
+  --bg-color: #FFFFFF;           
+  --text-main: #0F172A;          
   --text-light: #6D7A7F;
   --white: #FFFFFF; 
 
@@ -121,7 +121,6 @@ button, .btn-primary {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* CABECALHO */
 /* Cabecalho.css */
 
 .header-container {
@@ -138,10 +137,20 @@ button, .btn-primary {
 }
 
 .logo {
-    font-family: var(--font-headings);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 32px;
+  }
 }
 
 .nav-list {
