@@ -2,17 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap');
 
 :root {
-  /* Paleta de Cores */
-  --primary-color: #0EA5E9; 
-  --secondary-color: #38BDF8; 
-  --accent-color: #22C55E;      
+  --primary-color: #D98E73;   /* Terracota Suave */
+  --secondary-color: #4A6741; /* Verde Herbal */
+  --accent-color: #A67B5B;    /* Argila */
   
   /* Cores de Texto e Fundo */
-  --bg-color: #FFFFFF;           
-  --text-main: #0F172A;          
-  --text-light: #6D7A7F;
-  --white: #FFFFFF; 
+  --bg-color: #FFF9F1;        /* Bege Claríssimo */
+  --text-main: #213328;       /* Verde Petróleo Escuro */
+  --text-light: #7E8C83;      /* Sage Gray */
+  --white: #FFFFFF;
 
+
+  
   /* Tipografia */
   --font-headings: 'Montserrat', sans-serif;
   --font-body: 'Open Sans', sans-serif;
@@ -74,29 +75,20 @@ button, .btn-primary {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* --- Seção Home (Banner) --- */
+/* --- Seção Home --- */
 .home {
-  background-image: url('https://images.unsplash.com/photo-1758599669186-9eaf14f6f3ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21tdW5pdHklMjB2b2x1bnRlZXJzJTIwaGVscGluZyUyMHRvZ2V0aGVyfGVufDF8fHx8MTc3NTU3MjgyOXww&ixlib=rb-4.1.0&q=80&w=1080');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 80vh; 
+  /* min-height: 80vh;  */
   width: 100%;
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+  background-color: var(--secondary-color);
 }
 
-/* Overlay para contraste */
-.home .overlay {
-  position: absolute;
-  inset: 0; /* Atalho para top, left, width, height 100% */
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+.home-img {
+  width: 50%;
+  height: auto;
 }
 
 /* Conteúdo central da Home */
@@ -120,8 +112,7 @@ button, .btn-primary {
   opacity: 0.95;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
-
-/* Cabecalho.css */
+/* CABECALHO */
 
 .header-container {
     position: fixed;

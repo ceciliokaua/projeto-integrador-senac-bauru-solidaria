@@ -31,6 +31,8 @@ const PROJETOS_DATA: Projeto[] = [
         imagem: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=500",
         categoria: "Animal"
     }
+    
+    
 ];
 
 function Projetos() {

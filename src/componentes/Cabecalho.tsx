@@ -15,13 +15,13 @@ function Cabecalho() {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/cadastro" className="nav-link">
-                            Cadastro
+                        <Link to="/projetos" className="nav-link">
+                            Projetos
                         </Link>
                     </li>
                     <li>
-                        <Link to="/projetos" className="nav-link">
-                            Projetos
+                        <Link to="/cadastro" className="nav-link">
+                            Cadastro
                         </Link>
                     </li>
                 </ul>

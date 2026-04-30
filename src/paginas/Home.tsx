@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CadastroModal from "../componentes/CadastroModal";
+import imagemFundo from "../assets/fundo-home.jpg";
 
 function Home() {
 
@@ -8,6 +9,11 @@ function Home() {
     return (
         <>
             <section className="home">
+                <img 
+                    src= {imagemFundo}
+                    alt="Mãos de diferentes pessoas segurando brotos de plantas na terra" 
+                    className="home-img"
+                />
                 <div className="overlay">
                     <div className="content">
                         <h1>Transforme Vidas em Bauru!</h1>
