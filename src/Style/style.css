@@ -390,26 +390,14 @@ button, .btn-primary {
   }
 }
 
-/* SEÇÃO RODAPÉ */
-
-/* Cores base */
-
 /* Rodape geral */
-:rodape root {
-  --primary: #0EA5E9;
-  --secondary: #38BDF8;
-  --accent: #22C55E;
-  --background: #FFFFFF;
-  --text: #0F172A;
-}
-.Rodape {
-  background-color: var(--background);
+
+.rodape {
+  background-color: #f1f5f9;
   border-top: 1px solid #e5e7eb;
-  margin-top: 60px;
-  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 80px;
 }
 
-/* Container */
 .rodape-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -420,58 +408,52 @@ button, .btn-primary {
   gap: 40px;
 }
 
-/* Colunas */
 .rodape-column {
   display: flex;
   flex-direction: column;
 }
 
-/* Logo */
 .rodape-logo {
-  color: var(--primary);
-  font-size: 22px;
-  font-weight: bold;
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 
-/* Títulos */
 .rodape-title {
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--text);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
   margin-bottom: 12px;
 }
 
-/* Texto */
 .rodape-text {
-  font-size: 14px;
-  color: var(--text);
+  font-size: 0.9rem;
+  color: var(--text-light);
   line-height: 1.5;
 }
 
-/* Lista */
-.Rodape ul {
+.rodape ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.Rodape ul li {
+.rodape ul li {
   margin-bottom: 8px;
 }
 
-/* Links */
-.Rodape a {
+.rodape a {
   text-decoration: none;
-  color: var(--text);
-  font-size: 14px;
-  transition: 0.2s;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  transition: color 0.2s;
 }
 
-.Rodape a:hover {
-  color: var(--primary);
+.rodape a:hover {
+  color: var(--primary-color);
 }
 
-/* Redes sociais */
 .socials {
   display: flex;
   gap: 10px;
@@ -479,27 +461,26 @@ button, .btn-primary {
 }
 
 .socials a {
-  width: 35px;
-  height: 35px;
-  background-color: var(--secondary);
+  width: 32px;
+  height: 32px;
+  background-color: var(--secondary-color);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   font-weight: bold;
-  transition: 0.2s;
+  transition: background 0.2s;
 }
 
 .socials a:hover {
-  background-color: var(--primary);
+  background-color: var(--primary-color);
 }
 
-/* Parte inferior */
-.footer-bottom {
+.rodape-buttom {
   border-top: 1px solid #e5e7eb;
   text-align: center;
-  padding: 20px;
-  font-size: 13px;
-  color: var(--text);
+  padding: 15px;
+  font-size: 0.8rem;
+  color: var(--text-light);
 }
