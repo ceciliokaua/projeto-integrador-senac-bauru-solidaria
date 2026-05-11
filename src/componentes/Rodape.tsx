@@ -1,54 +1,55 @@
-import '../Style/style.css'
+import { Link } from 'react-router-dom';
+import '../Style/style.css';
 
-function Rodape(){
+function Rodape() {
   return (
-    <footer className= "rodape">
-      <div className= "rodape-container">
-       
+    <footer className="rodape">
+      <div className="rodape-container">
+        
         {/* Marca */}
         <div className="rodape-column">
-          <h2 className= "rodape-logo">Voluntariar</h2>
+          <h2 className="rodape-logo">Voluntariar</h2>
           <p className="rodape-text">
             Plataforma dedicada à divulgação de projetos sociais.
             Não realizamos intermediação — o interessado entra em contato
             diretamente com as iniciativas.
           </p>
         </div>
- 
+
         {/* Navegação */}
         <div className="rodape-column">
           <h3 className="rodape-title">Navegação</h3>
           <ul>
-            <li><a href="/">Início</a></li>
-            <li><a href="/projetos">Projetos</a></li>
-            <li><a href="/sobre">Sobre nós</a></li>
+            <li><Link to="/">Início</Link></li>
+            <li><Link to="/projetos">Projetos</Link></li>
+            <li><Link to="/sobre">Sobre nós</Link></li>
           </ul>
         </div>
- 
+
         {/* Transparência */}
         <div className="rodape-column">
           <h3 className="rodape-title">Transparência</h3>
           <ul>
-            <li><a href="/como-funciona">Como funciona</a></li>
-            <li><a href="/responsabilidade">Responsabilidade</a></li>
-            <li><a href="/privacidade">Privacidade</a></li>
+            <li><Link to="/como-funciona">Como funciona</Link></li>
+            <li><Link to="/responsabilidade">Responsabilidade</Link></li>
+            <li><Link to="/privacidade">Privacidade</Link></li>
           </ul>
         </div>
- 
+
         {/* Contato */}
         <div className="rodape-column">
           <h3 className="rodape-title">Contato</h3>
           <p className="rodape-text">baurusolidario2026@gmail.com</p>
- 
+
           <div className="socials">
             <a href="#">F</a>
             <a href="#">I</a>
             <a href="#">L</a>
           </div>
         </div>
- 
+
       </div>
- 
+
       <div className="rodape-bottom">
         © 2026 Voluntariar — Todos os direitos reservados.
       </div>
