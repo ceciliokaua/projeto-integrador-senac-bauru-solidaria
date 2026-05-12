@@ -5,7 +5,7 @@ function Responsabilidade() {
       <section className="secao-texto">
         <h1>Termo de Responsabilidade</h1>
         <p>
-          O <strong>Voluntariar</strong> atua exclusivamente como um mural de divulgação (vitrine). 
+          O <strong>Bauru Solidária</strong> atua exclusivamente como um mural de divulgação (vitrine). 
           É importante ressaltar que:
         </p>
         <ul>

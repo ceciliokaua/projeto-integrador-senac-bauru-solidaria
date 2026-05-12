@@ -6,7 +6,7 @@ function Privacidade() {
       <section className="secao-texto">
         <h1>Política de Privacidade</h1>
         <p>
-          Valorizamos sua privacidade. Atualmente, o site <strong>Voluntariar</strong> não coleta 
+          Valorizamos sua privacidade. Atualmente, o site <strong>Bauru Solidária</strong> não coleta 
           dados pessoais dos usuários por meio de formulários internos ou cookies de rastreamento.
         </p>
         <p>

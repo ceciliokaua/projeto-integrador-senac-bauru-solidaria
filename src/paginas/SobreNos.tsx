@@ -3,9 +3,9 @@ function SobreNos() {
   return (
     <main className="pagina-container">
       <section className="secao-texto">
-        <h1>Sobre o Voluntariar</h1>
+        <h1>Sobre o Bauru Solidária</h1>
         <p>
-          O <strong>Voluntariar</strong> nasceu da vontade de conectar corações dispostos a ajudar com 
+          O <strong>Bauru Solidária</strong> nasceu da vontade de conectar corações dispostos a ajudar com 
           causas que precisam de apoio na região de Bauru. Acreditamos que a tecnologia 
           pode ser a ponte para transformar a realidade social local.
         </p>

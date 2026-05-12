@@ -5,7 +5,6 @@ import Projetos from './paginas/Projetos'
 import PageNotFound from './paginas/PageNotFound'
 import Cabecalho from './componentes/Cabecalho'
 import Rodape from './componentes/Rodape'
-import Cards from './componentes/Cards'
 import CadastroModal from './componentes/CadastroModal'
 
 // Imports das novas páginas
