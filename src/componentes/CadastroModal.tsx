@@ -6,12 +6,12 @@ interface CadastroModalProps {
 }
 
 interface CadastroForm {
-    nome: string;
+    titulo: string;
+    categoria: string;
+    descricao: string;
     email: string;
     telefone: string;
-    projeto: string;
-    disponibilidade: string;
-    mensagem: string;
+    local: string;
 }
 
 function CadastroModal({ onClose }: CadastroModalProps) {
@@ -23,12 +23,12 @@ function CadastroModal({ onClose }: CadastroModalProps) {
     }, []);
 
     const initialFormState: CadastroForm = {
-        nome: "",
+        titulo: "",
+        categoria: "",
+        descricao: "",
         email: "",
         telefone: "",
-        projeto: "",
-        disponibilidade: "",
-        mensagem: "",
+        local: "",
     };
 
     const [form, setForm] = useState<CadastroForm>(initialFormState);
@@ -98,7 +98,7 @@ async function enviarCadastro(dados:CadastroForm) {
                 </button>
 
                 <header className="cadastro-header">
-                    <h2>Cadastro de Voluntário</h2>
+                    <h2>Cadastro de Projeto</h2>
                 </header>
                 
                 {sucesso && (
@@ -108,18 +108,39 @@ async function enviarCadastro(dados:CadastroForm) {
                 )}
 
                 <form className="cadastro-form" onSubmit={handleSubmit}>
-                    <label>Nome Completo *</label>
+                    <label>Nome do Projeto *</label>
                     <input 
                       type="text"
-                      name="nome"
-                      value={form.nome}
+                      name="titulo"
+                      value={form.titulo}
                       onChange={handleChange}
                       required
                     />
 
-                    <label>E-mail *</label>
-                    <input 
-                      type="text"
+                    <label>Categoria *</label>
+                    <select 
+                      name="categoria"
+                      value={form.categoria}
+                      onChange={handleChange}
+                      required
+                    >
+                      <option value="">Selecione uma categoria</option>
+                      <option value="Alimentação">Alimentação</option>
+                      <option value="Educação">Educação</option>
+                      <option value="Animal">Animal</option>
+                    </select>
+
+                    <label>Descrição *</label>
+                    <textarea
+                      name="descricao"
+                      value={form.descricao}
+                      onChange={handleChange}
+                      required
+                    />
+
+                    <label>Email de contato *</label>
+                    <input
+                      type="email"
                       name="email"
                       value={form.email}
                       onChange={handleChange}
@@ -127,7 +148,7 @@ async function enviarCadastro(dados:CadastroForm) {
                     />
 
                     <label>Telefone *</label>
-                    <input 
+                    <input
                       type="text"
                       name="telefone"
                       value={form.telefone}
@@ -135,45 +156,16 @@ async function enviarCadastro(dados:CadastroForm) {
                       required
                     />
 
-                    <label>Projeto de Interesse *</label>
-                    <select
-                      name="projeto"
-                      value={form.projeto}
-                      onChange={handleChange}
-                      required
-                    >
-                        <option value="">Selecione um projeto</option>
-                        <option value="banco-de-alimentos">Banco de Alimentos</option>
-                        <option value="educacao-infantil">Educação Infantil</option>
-                        <option value="cuidado-idosos">Cuidado aos idosos</option>
-                    </select>
-
-                    <label>Disponibilidade *</label>
-                    <select
-                      name="disponibilidade"
-                      value={form.disponibilidade}
-                      onChange={handleChange}
-                      required
-                    >
-                        <option value="">Selecione sua disponibilidade</option>
-                        <option value="semana-manha">Dias de semana - Manhã</option>
-                        <option value="semana-tarde">Dias de semana - Tarde</option>
-                        <option value="semana-noite">Dias de semana - Noite</option>
-                        <option value="final-semana">Finais de semana</option>
-                        <option value="flexivel">Flexível</option>
-                    </select>
-
-                    <label>Mensagem (Opcional) *</label>
-                    <input 
+                    <label>Local (Opcional)</label>
+                    <input
                       type="text"
-                      name="mensagem"
-                      value={form.mensagem}
+                      name="local"
+                      value={form.local}
                       onChange={handleChange}
-                      required
                     />
 
                     <button type="submit" className="cadastro-btn">
-                    Enviar Cadastro
+                    Cadastrar Projeto
                 </button>
 
                 </form>
