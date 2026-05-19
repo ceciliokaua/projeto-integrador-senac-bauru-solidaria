@@ -1,6 +1,14 @@
 import Cards from '../componentes/Cards';
 
-function Projetos() {
+interface Projeto {
+  id: number;
+  titulo: string;
+  descricao: string;
+  imagem: string;
+  categoria: string;
+}
+
+function Projetos({projetos}: { projetos: Projeto[] }) {
     return (
         <main className="projetos-container">
             <section className="secao-texto" style={{ textAlign: 'center' }}>
@@ -9,7 +17,7 @@ function Projetos() {
             </section>
             
             {/* Chamada do componente que contém a lógica dos cartões */}
-            <Cards />
+            <Cards projetos={projetos} />
         </main>
     );
 }

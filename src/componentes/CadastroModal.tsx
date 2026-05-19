@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import "../Style/style.css";
+import type { Projeto } from "../App";
 
 interface CadastroModalProps {
     onClose: () => void;
+    onAddProjeto: (projeto: Omit<Projeto, "id">) => void;
 }
 
 interface CadastroForm {
@@ -14,7 +16,7 @@ interface CadastroForm {
     local: string;
 }
 
-function CadastroModal({ onClose }: CadastroModalProps) {
+function CadastroModal({ onClose, onAddProjeto }: CadastroModalProps) {
 
     const [isVisible, setIsVisible] = useState(false);
 
@@ -61,9 +63,15 @@ async function handleSubmit(e: React.FormEvent) {
     try {
         await enviarCadastro(form);
 
+        onAddProjeto({
+            ...form,
+            imagem: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500"
+        });
+
         setSucesso(true);
         setForm(initialFormState);
-    }   catch (error) {
+    }
+        catch (error) {
         console.error(error);
         alert("Erro ao enviar cadastro");
     }
@@ -75,6 +83,7 @@ function handleClose() {
     setTimeout(() => {
         onClose();
     }, 300); // tempo da animação
+
 }
 
 async function enviarCadastro(dados:CadastroForm) {
