@@ -21,7 +21,7 @@ function Home() {
                         <p>Conectando pessoas que querem ajudar com projetos que transformam nossa comunidade</p>
 
                         <button className="btn-primary" onClick={() => setMostrarCadastro(true)}>
-                            Seja um voluntário
+                            Cadastre seu Projeto
                         </button>
                     </div>
                 </div>
@@ -31,7 +31,6 @@ function Home() {
             <section className="home-apresentacao">
                 <div className="pagina-container">
                     <div className="secao-texto" style={{ textAlign: 'center', marginBottom: '40px' }}>
-                        <br /><br /><br />
                         <h2>Faça a diferença na sua cidade</h2>
                         <br />
                         <p>
@@ -58,8 +57,11 @@ function Home() {
             </section>
 
             {mostrarCadastro && (
-                <CadastroModal onClose={() => setMostrarCadastro(false)} />
-            )}
+    <CadastroModal 
+        onClose={() => setMostrarCadastro(false)} 
+        onAddProjeto={(novoProjeto) => console.log("Projeto adicionado via Home:", novoProjeto)}
+    />
+)}
         </>
     );
 }

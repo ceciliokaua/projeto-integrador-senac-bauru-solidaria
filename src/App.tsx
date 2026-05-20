@@ -4,7 +4,6 @@ import './Style/style.css'
 
 import Home from './paginas/Home'
 import Projetos from './paginas/Projetos'
-import ProjetoDetalhe from './paginas/ProjetoDetalhe'
 import PageNotFound from './paginas/PageNotFound'
 import Cabecalho from './componentes/Cabecalho'
 import Rodape from './componentes/Rodape'
@@ -15,6 +14,7 @@ import SobreNos from './paginas/SobreNos'
 import ComoFunciona from './paginas/ComoFunciona'
 import Responsabilidade from './paginas/Responsabilidade'
 import Privacidade from './paginas/Privacidade'
+import FormularioCard from './componentes/FormularioCard'
 
 export interface Projeto {
   id: number;
@@ -24,26 +24,9 @@ export interface Projeto {
   categoria: string;
 }
 
-const initialProjetos = [
-    {
-      id: 1,
-      titulo: "Arrecadação de Alimentos",
-      descricao: "Ajude famílias carentes da região noroeste de Bauru com cestas básicas.",
-      imagem: "https://images.unsplash.com/photo-1593113598332-cd288d649433?w=500",
-      categoria: "Alimentação"
-    },
-    {
-      id: 2,
-      titulo: "Aulas de Reforço Escolar",
-      descricao: "Seja voluntário ensinando matemática e português para crianças do ensino fundamental.",
-      imagem: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=500",
-      categoria: "Educação"
-    }
-  ]; 
-
 function App() {
-
-  const [projetos, setProjetos] = useState(initialProjetos);
+  // Estado iniciado como array vazio para eliminar os dois cards de teste antigos
+  const [projetos, setProjetos] = useState<Projeto[]>([]);
 
   const navigate = useNavigate();
 
@@ -66,8 +49,8 @@ function App() {
                 <>
                   <Home />
                   <CadastroModal 
-                  onClose={() => navigate(-1)}
-                  onAddProjeto={adicionarProjeto} 
+                    onClose={() => navigate(-1)}
+                    onAddProjeto={adicionarProjeto} 
                   />
                 </>
                }
@@ -75,7 +58,7 @@ function App() {
 
         {/* Agora a página de Projetos inclui o componente Cards */}
         <Route path="/projetos" element={<Projetos projetos={projetos} />} />
-        <Route path="/projetos/:id" element={<ProjetoDetalhe />} />
+        <Route path="/projetos/:id" element={<FormularioCard />} />
 
         {/* Páginas institucionais apenas com o texto */}
         <Route path="/sobre" element={<SobreNos />} />
@@ -92,4 +75,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
